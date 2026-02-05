@@ -2,11 +2,11 @@ name: Hello World
 
 on: 
   workflow_dispatch: 
-  # push:
-  #   #branches:
-  #   # - main
-  # schedule:
-  #   - cron: "*/1 * * * *" 
+  push:
+    paths:
+      - 'code/**'
+      - '.github/workflows/hello-world.yml'
+ 
   pull_request:
     branches:
       - main  
