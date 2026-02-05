@@ -1,11 +1,12 @@
 name: Hello World
 
 on: 
-  push:
-    #branches:
-    # - main
-  schedule:
-    - cron: "*/1 * * * *" 
+  workflow_dispatch: 
+  # push:
+  #   #branches:
+  #   # - main
+  # schedule:
+  #   - cron: "*/1 * * * *" 
     
 jobs:
   build:
