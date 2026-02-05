@@ -8,3 +8,6 @@ jobs:
     steps:
      - name: this is my step
        run: echo 'hello world Iulian'
+
+     - name : another task
+       run: echo "This is another run"
