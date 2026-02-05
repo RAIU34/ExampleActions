@@ -25,5 +25,8 @@ jobs:
        run: |
          echo "The repository  ${{github.repository}} contains the following files:"
          tree
+         
+     - name: Shows the contents of the new file
+       run: cat new-file.txt 
      
       
