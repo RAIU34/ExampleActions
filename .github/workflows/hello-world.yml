@@ -17,3 +17,13 @@ jobs:
 
      - name : another task
        run: echo "This is another run"
+       
+     - name: Checkout
+       uses: actions/checkout@v6.0.2
+
+     - name: List the files of the repo
+       run: |
+         echo "The repository  ${{github.repository}} contains the following files:"
+         tree
+     
+      
