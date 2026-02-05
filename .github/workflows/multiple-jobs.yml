@@ -16,7 +16,8 @@ jobs:
         run: echo "job 1"
 
   job-3: 
+    needs: [job-1, job-2]
     runs-on: macos-latest
-    steps:
+    steps: 
       - name: Print job's name
         run: echo "job 1"
