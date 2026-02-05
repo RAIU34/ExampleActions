@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: print Os
         run: |
-          eco "We are using the os: ${{matrix.operating_System}}"
+          echo "We are using the os: ${{matrix.operating_System}}"
     
         
     
