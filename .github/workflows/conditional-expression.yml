@@ -1,0 +1,21 @@
+name: Conditional Extpression 
+
+on: 
+  workflow_dispatch: 
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        operating_System : [windows-latest, ubuntu-latest, macos-latest]
+
+    runs-on: ${{matrix.operating_System}}
+    steps:
+      - name: Only for windows
+        if: ${{matrix.operating_System == 'windows-latest'}}
+        run: echo "This should only be executed on windows"
+
+      - name: Common step for every OS
+        run: echo "Common step working on ${{matrix.operating_System}}"
+      
